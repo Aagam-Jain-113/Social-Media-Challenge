@@ -28,7 +28,7 @@ html.transition *::after{
 
 body{
     background: var(--bg);
-    margin: 2rem;
+    margin: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,14 +39,6 @@ a {
     color: hsl(228, 45%, 44%); 
 }
 
-h1{
-    font-size: 1rem;
-    color: var(--text);
-    font-weight: 700;
-    margin: 3rem 0 1.3rem 0;
-    margin-bottom: 0.5rem;
-}
-
 h3{
     font-size: 0.8rem;
 }
@@ -55,17 +47,21 @@ h3,h4,h5{
     color: #63687e;
 }
 
+.title{
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 700;
+    margin: 0 0 1.3rem 0;
+    margin-bottom: 0.5rem;
+}
+
 .wrapper{
     width: 90%;
     max-width: 1000px;
 }
 
-header{
-    margin-bottom: 5%;
-}
-
 .totalflwrs{
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 input[type=checkbox]{
@@ -111,18 +107,25 @@ label:active:after {
 	width: 5px;
 }
 
+.header{
+    margin-bottom: 2rem;
+}
+
 .mode{
     color: #63687e;
     font-weight: 700;
     display: inline-block;
 }
 
+.switch{
+    display: inline-block;
+}
+
 .container{
     display: grid;   
-    width: 100%;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    padding: 10px;
+    margin-bottom: 2rem;
 }
 
 .box{
@@ -221,8 +224,14 @@ label:active:after {
  }
 
 @media screen and (min-width: 600px){
-    h1{
+    .title{
         font-size: 1.5rem;
         margin: .5rem 0 0.5rem 0;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
  }
